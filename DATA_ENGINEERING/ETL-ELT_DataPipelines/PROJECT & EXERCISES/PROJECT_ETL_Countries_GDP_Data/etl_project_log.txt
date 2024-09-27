@@ -1,0 +1,46 @@
+07-30-2024 09:36:36 --- START: EXTRACT HTML table of GDP of various countries to Pandas DataFrame
+07-30-2024 09:36:36 --- ** Initializing data extraction process **
+07-30-2024 09:36:36 --- ** Extracting column headers **
+07-30-2024 09:36:36 --- ** Extracting rows **
+07-30-2024 09:36:36 --- ** Data extraction process complete **
+07-30-2024 09:36:36 --- END: EXTRACT HTML table of GDP of various countries to Pandas DataFrame
+07-30-2024 09:36:36 --- START: TRANSFORM GDP column of Pandas DataFrame
+07-30-2024 09:36:36 --- ** Initializing data transformation process **
+07-30-2024 09:36:36 --- ** Remove commas from GDP_USD_billion column **
+07-30-2024 09:36:36 --- ** Temporarily replace the null values with 0 **
+07-30-2024 09:36:36 --- ** Convert data type of GDP_USD_billion column from string to float **
+07-30-2024 09:36:36 --- ** Convert GDP_USD_billion column from millions to billions **
+07-30-2024 09:36:36 --- ** Round GDP_USD_billion column to 2 decimal places **
+07-30-2024 09:36:36 --- ** Re-ininstate null values **
+07-30-2024 09:36:36 --- ** Data transformation process complete **
+07-30-2024 09:36:36 --- END: TRANSFORM GDP column of Pandas DataFrame
+07-30-2024 09:36:36 --- START: LOAD Pandas DataFrame to JSON and SQLite Database
+07-30-2024 09:36:36 --- ** Initializing data loading process **
+07-30-2024 09:36:36 --- ** Loading data to JSON file: Countries_by_GDP.json **
+07-30-2024 09:36:36 --- ** Loading data to SQLite Database: World_Economies.db **
+07-30-2024 09:36:36 --- ** Data loading process complete**
+07-30-2024 09:36:36 --- END: LOAD Pandas DataFrame to JSON and SQLite Database
+07-30-2024 10:55:47 --- START: EXTRACT HTML table of GDP of various countries to Pandas DataFrame
+07-30-2024 10:55:47 --- ** Initializing data extraction process **
+07-30-2024 10:55:49 --- ** Extracting column headers **
+07-30-2024 10:55:49 --- ** Extracting rows **
+07-30-2024 10:55:49 --- ** Data extraction process complete **
+07-30-2024 10:55:49 --- END: EXTRACT HTML table of GDP of various countries to Pandas DataFrame
+07-30-2024 10:55:49 --- START: TRANSFORM GDP column of Pandas DataFrame
+07-30-2024 10:55:49 --- ** Initializing data transformation process **
+07-30-2024 10:55:49 --- ** Remove commas from GDP_USD_billion column **
+07-30-2024 10:55:49 --- ** Temporarily replace the null values with 0 **
+07-30-2024 10:55:49 --- ** Convert data type of GDP_USD_billion column from string to float **
+07-30-2024 10:55:49 --- ** Convert GDP_USD_billion column from millions to billions **
+07-30-2024 10:55:49 --- ** Round GDP_USD_billion column to 2 decimal places **
+07-30-2024 10:55:49 --- ** Re-ininstate null values **
+07-30-2024 10:55:49 --- ** Data transformation process complete **
+07-30-2024 10:55:49 --- END: TRANSFORM GDP column of Pandas DataFrame
+07-30-2024 10:55:49 --- START: LOAD Pandas DataFrame to JSON and SQLite Database
+07-30-2024 10:55:49 --- ** Initializing data loading process **
+07-30-2024 10:55:49 --- ** Loading data to JSON file: Countries_by_GDP.json **
+07-30-2024 10:55:49 --- ** Loading data to SQLite Database: World_Economies.db **
+07-30-2024 10:55:49 --- ** Data loading process complete**
+07-30-2024 10:55:49 --- END: LOAD Pandas DataFrame to JSON and SQLite Database
+07-30-2024 10:55:49 --- START: Querying countries that have greater than 100 billion in GDP
+07-30-2024 10:55:49 --- END: Querying countries that have greater than 100 billion in GDP

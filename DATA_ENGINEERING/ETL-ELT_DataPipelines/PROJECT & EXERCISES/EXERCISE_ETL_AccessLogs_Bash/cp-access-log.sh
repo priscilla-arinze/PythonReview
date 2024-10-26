@@ -2,10 +2,10 @@
 
 . ./get-postgres-secrets.sh
 
-# echo $POSTGRESUSERNAME
-# echo $POSTGRESPASSWORD
-# echo $POSTGRESHOST
-# echo $POSTGRESPORT
+echo $POSTGRESUSERNAME
+echo $POSTGRESPASSWORD
+echo $POSTGRESHOST
+echo $POSTGRESPORT
 
 ## EXTRACT
 echo "Extracting data..."
@@ -21,6 +21,7 @@ tr "#" "," < extracted-data.txt > transformed-data.csv
 
 ## LOAD
 echo "Loading data to Postgres database..."
-# export PGPASSWORD=$POSTGRESPASSWORD
+export PGPASSWORD=$POSTGRESPASSWORD # Bash export
+# $env:PGPassword=$POSTGRESPASSWORD # Powershell export
 
-# echo "\c etl_exercises;\COPY access_logs FROM './transformed-data.csv' DELIMITERS ',' CSV HEADER;" | psql --username=postgres --host=localhost
+echo "\c etl_exercises;\COPY access_logs FROM 'transformed-data.csv' DELIMITERS ',' CSV HEADER;" | psql --username="$POSTGRESUSERNAME" --host="$POSTGRESHOST" --port=$POSTGRESPORT

@@ -25,7 +25,12 @@ while read -r line; do
     fi
 done < $SECRETS_FILE
 
-export POSTGRESUSERNAME=${VALUEUSERNAME##*= }
-export POSTGRESPASSWORD=${VALUEPASSWORD##*= }
-export POSTGRESHOST=${VALUEHOST##*= }
-export POSTGRESPORT=${VALUEPORT##*= }
+POSTGRESUSERNAME_NO_TRIM=${VALUEUSERNAME##*= }
+POSTGRESPASSWORD_NO_TRIM=${VALUEPASSWORD##*= }
+POSTGRESHOST_NO_TRIM=${VALUEHOST##*= }
+POSTGRESPORT_NO_TRIM=${VALUEPORT##*= }
+
+export POSTGRESUSERNAME="$(echo -e "${POSTGRESUSERNAME_NO_TRIM}" | tr -d '[:space:]')"
+export POSTGRESPASSWORD="$(echo -e "${POSTGRESPASSWORD_NO_TRIM}" | tr -d '[:space:]')"
+export POSTGRESHOST="$(echo -e "${POSTGRESHOST_NO_TRIM}" | tr -d '[:space:]')"
+export POSTGRESPORT="$(echo -e "${POSTGRESPORT_NO_TRIM}" | tr -d '[:space:]')"

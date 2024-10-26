@@ -2,11 +2,6 @@
 
 . ./get-postgres-secrets.sh
 
-echo $POSTGRESUSERNAME
-echo $POSTGRESPASSWORD
-echo $POSTGRESHOST
-echo $POSTGRESPORT
-
 ## EXTRACT
 echo "Extracting data..."
 
